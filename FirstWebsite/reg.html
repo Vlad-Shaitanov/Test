@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../FirstWebsite/CSS/style.css">
+	<title>Регистрация</title>
+</head>
+
+<body class="body-reg">
+	<div class="auth">
+		<h1 class="auth-title">Регистрация</h1>
+		<form class="form" action="#" method="POST">
+			<div class="form-group">
+				<input class="input" type="text" name="name" placeholder="Введите имя">
+			</div>
+			<div class="form-group">
+				<input class="input" type="tel" name="tel" placeholder="Ваш номер телефона">
+			</div>
+			<div class="form-group">
+				<input class="input" type="email" name="email" placeholder="Введите email">
+			</div>
+			<div class="form-group">
+				<input class="input" type="password" name="password" placeholder="Введите пароль">
+			</div>
+			<div class="form-group">
+				<input class="input" type="password" name="password-confirm" placeholder="Подтвердите пароль">
+			</div>
+			<div class="form-group">
+				<input type="radio" name="choose-male" id="male">
+				<label for="male">Мужской</label>
+				<input type="radio" name="choose-male" id="female">
+				<label for="female">Женский</label>
+			</div>
+			<div class="form-group">
+				<select class="select" name="city" id="">
+					<option value="">Москва</option>
+					<option value="">Санкт-Петербург</option>
+					<option value="">Нижний Новгород</option>
+					<option value="">Новосибирск</option>
+					<option value="">Екатеринбург</option>
+					<option value="">Воронеж</option>
+					<option value="">Омск</option>
+					<option value="">Пермь</option>
+					<option value="">Красноярск</option>
+					<option value="">Челябинск</option>
+					<option value="">Волгоград</option>
+					<option value="">Уфа</option>
+					<option value="">Ростов-на-Дону</option>
+					<option value="">Самара</option>
+					<option value="">Казань</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" name="checkbox" id="rules">
+				<label for="rules">С условиями пользовательского
+					<a class="rules-link" href="#">соглашения</a>
+					ознакомлен.</label>
+			</div>
+			<div class="form-group">
+				<button class="btn reset" type="reset">Очистить форму</button>
+				<button class="btn submit" type="submit">Отправить</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
