@@ -1,9 +1,17 @@
 html {
 	font-size: 15px;
 }
+@font-face {
+	font-family: Century Gothic;
+	src: url("../Fonts/Century\ Gothic\ Regular.ttf") format("TrueType");
+}
+@font-face {
+	font-family: Century Gothic;
+	src: url("../Fonts/Century\ Gothic\ Bold.ttf") format("TrueType");
+	font-weight: 700;
+}
 
 body {
-	font-family: "Montserrat", sans-serif;
 	font-size: 1rem;
 	width: 100%;
 	max-width: 93.4rem;
@@ -33,7 +41,7 @@ h6 {
 	width: 100%;
 	max-width: 93.4rem;
 	min-height: 48.6rem;
-	background: #fff url("//images/contain_small_01.jpg") no-repeat center;
+	background: #fff url("../images/contain_small_01.jpg") no-repeat center;
 	background-size: cover;
 }
 
@@ -55,7 +63,7 @@ h6 {
 	display: inline-block;
 	padding-right: 2.5rem;
 	font-size: 1.1rem;
-	font-family: inherit;
+	font-family: Century Gothic;
 	text-decoration: none;
 	color: #fff;
 }
@@ -70,10 +78,10 @@ h6 {
 
 .top-text {
 	display: block;
-	font-family: "Montserrat", sans-serif;
+	font-family: Century Gothic;
 	> h2 {
-		margin: 9% auto;
-		padding-left: 12%;
+		margin: 9.5% auto;
+		padding-left: 19.5%;
 		font-size: 3.2rem;
 		font-weight: 700;
 		color: #fff;

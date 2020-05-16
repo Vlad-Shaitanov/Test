@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "..\\VS Code Projects\\MyProjects"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Frontend projects"
+	}
+}
