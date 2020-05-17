@@ -56,8 +56,36 @@ h6 {
 
 	position: relative;
 }
+.header-link {
+	display: block;
+	&:nth-child(1) {
+		position: absolute;
+		top: 33%;
+		left: 3%;
+	}
+	&:nth-child(2) {
+		position: absolute;
+		top: 33%;
+		left: 6%;
+	}
+	&:nth-child(3) {
+		position: absolute;
+		top: 33%;
+		left: 9%;
+	}
+}
 .header-links {
-	padding-left: 2%;
+	display: inline;
+	padding-left: 10%;
+}
+
+/* Navigation
+==========*/
+.nav-left {
+	padding-right: 5%;
+}
+.nav-right {
+	padding-left: 5%;
 }
 .nav-link {
 	display: inline-block;
@@ -72,23 +100,62 @@ h6 {
 	top: 15%;
 	left: 45.5%;
 }
+
 .form {
-	padding-right: 5%;
+	display: block;
+	margin: 0 5% 0 0;
 }
 
 .top-text {
 	display: block;
 	font-family: Century Gothic;
 	> h2 {
-		margin: 9.5% auto;
-		padding-left: 19.5%;
+		margin: 9% auto 4rem;
+		position: relative;
+		text-align: center;
+		padding-left: 2%;
 		font-size: 3.2rem;
 		font-weight: 700;
 		color: #fff;
+		&:after {
+			content: "";
+			height: 0.1rem;
+			width: 3.8rem;
+			background-color: #fff;
+			position: absolute;
+			bottom: -60%;
+			right: 47%;
+		}
 	}
 	> h4 {
+		display: block;
+		margin: 0 auto 3rem;
 		font-size: 1.6rem;
 		font-weight: 400;
 		color: #fff;
+		text-align: center;
+	}
+}
+
+.top-text-btn {
+	display: block;
+	margin: 0 42%;
+	width: 100%;
+	max-width: 15.8rem;
+	height: 3.3rem;
+	border-radius: 1.6rem;
+	border: 0;
+	font-family: inherit;
+	font-size: 1.3rem;
+
+	color: #fff;
+	background-color: #000;
+	cursor: pointer;
+	transition: background-color 0.2s linear;
+	&:hover {
+		background-color: #417936;
+	}
+	&:active {
+		background-color: #44d427;
 	}
 }
