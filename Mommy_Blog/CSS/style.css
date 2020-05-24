@@ -15,8 +15,6 @@ html {
 
 body {
   font-size: 1rem;
-  width: 100%;
-  max-width: 93.4rem;
 }
 
 *,
@@ -25,6 +23,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 h1,
@@ -36,14 +35,19 @@ h6 {
   margin: 0;
 }
 
+.container {
+  width: 100%;
+  max-width: 93.7rem;
+}
+
 .page {
   width: 100%;
-  max-width: 93.4rem;
+  max-width: 93.6rem;
 }
 
 .top {
   width: 100%;
-  max-width: 93.4rem;
+  max-width: 93.7rem;
   min-height: 48.6rem;
   background: #fff url("../images/contain_small_01.jpg") no-repeat center;
   background-size: cover;
@@ -232,7 +236,7 @@ h6 {
 }
 
 .firstblock-img {
-  margin-left: 8.3rem;
+  margin-left: 8.2rem;
 }
 
 .firstblock-text {
@@ -282,5 +286,65 @@ h6 {
 }
 
 .firstblock-btn:active {
+  background-color: #44d427;
+}
+
+/*Secondblock
+==========*/
+.secondblock {
+  display: flex;
+  margin-top: 3.1rem;
+}
+
+.secondblock-img {
+  margin-left: 8.2rem;
+}
+
+.secondblock-text {
+  max-width: 33.2rem;
+  margin-left: 8.2rem;
+  font-family: Century Gothic;
+}
+
+.secondblock-text > p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #656565;
+}
+
+.secondblock-text-title {
+  margin-top: 4rem;
+  margin-bottom: 3.3rem;
+  font-size: 2rem;
+  color: #000;
+  line-height: 3.2rem;
+}
+
+.secondblock-text-title > span {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.secondblock-btn {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 15.8rem;
+  height: 3.3rem;
+  border-radius: 1.6rem;
+  border: 0;
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #7a7a78;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.secondblock-btn:hover {
+  background-color: #417936;
+}
+
+.secondblock-btn:active {
   background-color: #44d427;
 }
