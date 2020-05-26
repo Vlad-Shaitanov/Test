@@ -23,6 +23,10 @@ body {
 	border: 0;
 }
 
+/** {
+	outline: 0.1rem solid red;
+}*/
+
 h1,
 h2,
 h3,
@@ -216,6 +220,7 @@ h6 {
 	display: flex;
 
 	margin-top: 3.1rem;
+	margin-bottom: 5rem;
 }
 .firstblock-img {
 	margin-left: 8.2rem;
@@ -237,9 +242,19 @@ h6 {
 	font-size: 2rem;
 	color: #000;
 	line-height: 3.2rem;
+	position: relative;
 	> span {
 		font-size: 3.5rem;
 		font-weight: 700;
+	}
+	&:after {
+		content: "";
+		width: 3.5rem;
+		height: 0.1rem;
+		background-color: #000;
+		position: absolute;
+		top: 8rem;
+		left: 0.2rem;
 	}
 }
 .firstblock-btn {
@@ -272,6 +287,7 @@ h6 {
 	display: flex;
 
 	margin-top: 3.1rem;
+	margin-bottom: 5rem;
 }
 .secondblock-img {
 	margin-left: 8.2rem;
@@ -292,9 +308,19 @@ h6 {
 	font-size: 2rem;
 	color: #000;
 	line-height: 3.2rem;
+	position: relative;
 	> span {
 		font-size: 3.5rem;
 		font-weight: 700;
+	}
+	&:after {
+		content: "";
+		width: 3.5rem;
+		height: 0.1rem;
+		background-color: #000;
+		position: absolute;
+		top: 8rem;
+		left: 0.2rem;
 	}
 }
 .secondblock-btn {
@@ -310,6 +336,139 @@ h6 {
 
 	color: #fff;
 	background-color: #7a7a78;
+	cursor: pointer;
+	transition: background-color 0.2s linear;
+	&:hover {
+		background-color: #417936;
+	}
+	&:active {
+		background-color: #44d427;
+	}
+}
+
+/* Thirdblock
+==========*/
+
+.thirdblock {
+	display: flex;
+
+	margin-top: 3.1rem;
+	margin-bottom: 5rem;
+}
+.thirdblock-img {
+	margin-left: 8.2rem;
+}
+.thirdblock-text {
+	max-width: 33.2rem;
+	margin-left: 6.5rem;
+	margin-right: 8.3rem;
+	font-family: Century Gothic;
+	> p {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+		color: #656565;
+	}
+}
+.thirdblock-text-title {
+	margin-top: 4rem;
+	margin-bottom: 3.3rem;
+	font-size: 2rem;
+	color: #000;
+	line-height: 3.2rem;
+	position: relative;
+	> span {
+		font-size: 3.5rem;
+		font-weight: 700;
+	}
+	&:after {
+		content: "";
+		width: 3.5rem;
+		height: 0.1rem;
+		background-color: #000;
+		position: absolute;
+		top: 8rem;
+		left: 0.2rem;
+	}
+}
+.thirdblock-btn {
+	display: block;
+	margin-top: 1rem;
+	width: 100%;
+	max-width: 15.8rem;
+	height: 3.3rem;
+	border-radius: 1.6rem;
+	border: 0;
+	font-family: inherit;
+	font-size: 1.3rem;
+
+	color: #fff;
+	background-color: #7a7a78;
+	cursor: pointer;
+	transition: background-color 0.2s linear;
+	&:hover {
+		background-color: #417936;
+	}
+	&:active {
+		background-color: #44d427;
+	}
+}
+
+/* Feedback-form
+==========*/
+
+.feedback-form {
+	display: flex;
+	background-color: #7a7a78;
+}
+.form2 {
+	width: 49%;
+	margin-left: 8.2rem;
+
+	> h2 {
+		margin-top: 4rem;
+		margin-bottom: 3.3rem;
+		font-family: Century Gothic;
+		font-size: 2rem;
+		color: #fff;
+		line-height: 3rem;
+		position: relative;
+		> span {
+			font-size: 3.5rem;
+			font-weight: 700;
+			color: #fff;
+		}
+	}
+}
+
+.input-feedback-form {
+	margin-bottom: 1rem;
+	display: block;
+	padding: 0.8rem 0;
+	font-family: Century Gothic;
+	font-size: 3rem;
+
+	border: 0;
+	border-bottom: 0.1rem solid #ffffff;
+	background-color: #7a7a78;
+	color: #070707;
+}
+
+.feedback-form-img {
+	width: 51%;
+}
+.form2-btn {
+	display: block;
+	margin-top: 1rem;
+	width: 100%;
+	max-width: 15.8rem;
+	height: 3.3rem;
+	border-radius: 1.6rem;
+	border: 0;
+	font-family: Century Gothic;
+	font-size: 1.3rem;
+
+	color: #000;
+	background-color: #fff;
 	cursor: pointer;
 	transition: background-color 0.2s linear;
 	&:hover {

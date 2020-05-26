@@ -1,6 +1,6 @@
 "use strict";
 
-let money = prompt("Ваш бюджет на месяц?", "");
+let money = +prompt("Ваш бюджет на месяц?", "");
 let time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
 let appData = {
@@ -12,16 +12,46 @@ let appData = {
 	savings: false
 };
 
-let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
-	a2 = prompt("Во сколько обойдется?", ''),
-	a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
-	a4 = prompt("Во сколько обойдется?", '');
+// outer:
+// for (let i = 0; i < 2; i++) {
 
-appData.expenses[a1] = a2;
-appData.expenses[a3] = a4;
+// 	let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
+// 		b = prompt("Во сколько обойдется?", '');
 
-// Важно! В последних версиях браузеров поведение работы со свойствами объектов поменялось. 
-// Теперь синтаксис через точку может не работать. Поэтому выше я использовал квадратные скобки. 
-// Если вы это читаете - то в скором времени обновится и видео в самом курсе. Спасибо за внимание!
+// 	if ((typeof (a)) === "string" && (typeof (a)) != null &&
+// 		(typeof (b)) != null && a != "" && b != "" && a.length < 50) {
+// 		console.log("Done");
+// 		appData.expenses[a] = b;
+// 	} else {
+// 		continue outer;
+// 	}
+// };
 
-alert(appData.budget / 30);
+let count = 0;
+while (count < 2) {
+	let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
+		b = prompt("Во сколько обойдется?", '');
+
+	if ((typeof (a)) === "string" && (typeof (a)) != null &&
+		(typeof (b)) != null && a != "" && b != "" && a.length < 50) {
+		console.log("Done");
+		appData.expenses[a] = b;
+	} else {
+
+	}
+	count++;
+}
+
+appData.moneyPerDay = appData.budget / 30;
+
+alert("Ежедневный бюджет: " + appData.moneyPerDay);
+
+if (appData.moneyPerDay < 100) {
+	console.log("Минимальный уровень достатка:(")
+} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+	console.log("Средний уровень достатка");
+} else if (appData.moneyPerDay > 2000) {
+	console.log("Высокий уровень достатка;)");
+} else {
+	console.log("Что-то пошло не так");
+}
