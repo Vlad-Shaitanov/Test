@@ -26,9 +26,6 @@ body {
   border: 0;
 }
 
-/** {
-	outline: 0.1rem solid red;
-}*/
 h1,
 h2,
 h3,
@@ -453,12 +450,12 @@ h6 {
 ==========*/
 .feedback-form {
   display: flex;
-  background-color: #7a7a78;
 }
 
 .form2 {
   width: 49%;
-  margin-left: 8.2rem;
+  padding-left: 8.2rem;
+  background-color: #7a7a78;
 }
 
 .form2 > h2 {
@@ -478,15 +475,19 @@ h6 {
 }
 
 .input-feedback-form {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: block;
-  padding: 0.8rem 0;
+  padding: 0.8rem 15rem 0.8rem 0;
   font-family: Century Gothic;
-  font-size: 3rem;
+  font-size: 1.2rem;
   border: 0;
   border-bottom: 0.1rem solid #ffffff;
   background-color: #7a7a78;
   color: #070707;
+}
+
+.input-feedback-form::placeholder {
+  color: #fff;
 }
 
 .feedback-form-img {
@@ -495,7 +496,7 @@ h6 {
 
 .form2-btn {
   display: block;
-  margin-top: 1rem;
+  margin-top: 3rem;
   width: 100%;
   max-width: 15.8rem;
   height: 3.3rem;
@@ -515,4 +516,243 @@ h6 {
 
 .form2-btn:active {
   background-color: #44d427;
+}
+
+/*Middle-title*/
+.middle-title {
+  display: block;
+  margin: 5.6rem 0;
+  text-align: center;
+  font-family: Century Gothic;
+  font-size: 3.2rem;
+}
+
+.middle-title > span {
+  font-weight: 700;
+}
+
+/*Image-group*/
+.image-group {
+  display: block;
+  height: 100%;
+  margin-left: 8.2rem;
+  margin-bottom: 75rem;
+  position: relative;
+}
+
+.img-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.img-two {
+  position: absolute;
+  top: 0;
+  left: 26.5rem;
+}
+
+.img-three {
+  position: absolute;
+  top: 0;
+  left: 53rem;
+}
+
+.img-four {
+  position: absolute;
+  top: 26.5rem;
+  left: 0;
+}
+
+.img-five-outer {
+  display: inline;
+  position: absolute;
+  top: 41rem;
+  left: 26.5rem;
+}
+
+.five-img {
+  display: inline;
+  position: relative;
+}
+
+.img-title {
+  font-family: Century Gothic;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #fff;
+  position: absolute;
+  left: 3.8rem;
+  bottom: 9.5rem;
+}
+
+.img-title > span {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.img-title:after {
+  content: "";
+  height: 0.1rem;
+  width: 3.7rem;
+  background-color: #fff;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+}
+
+.img-five-link {
+  text-decoration: none;
+  font-family: Century Gothic;
+  font-size: 1.4rem;
+  color: #fff;
+  position: absolute;
+  left: 3.8rem;
+  bottom: 6.4rem;
+}
+
+.img-six {
+  position: absolute;
+  top: 26.5rem;
+  left: 53rem;
+}
+
+/* Category button
+==========*/
+.category-btn {
+  display: block;
+  width: 100%;
+  margin: 0 45%;
+  max-width: 11.3rem;
+  height: 3.3rem;
+  border-radius: 1.6rem;
+  border: 0;
+  font-family: Century Gothic;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.category-btn:hover {
+  background-color: #417936;
+}
+
+.category-btn:active {
+  background-color: #44d427;
+}
+
+/* Bottom
+==========*/
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.bottom-title-inst {
+  display: block;
+  width: 52%;
+  padding-right: 3rem;
+  font-family: Century Gothic;
+  font-size: 1.2rem;
+  line-height: 3.2rem;
+  text-align: end;
+  position: relative;
+}
+
+.bottom-title-inst span {
+  font-weight: 700;
+  font-size: 3.8rem;
+}
+
+.bottom-title-inst span:after {
+  content: "";
+  height: 0.1rem;
+  width: 3.8rem;
+  background-color: #000;
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+}
+
+.bottom-title-text {
+  display: block;
+  width: 48%;
+  max-width: 37.1rem;
+  font-family: Century Gothic;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #656565;
+}
+
+.bottom-images {
+  display: block;
+  margin-top: 3rem;
+}
+
+.bottom-img1 {
+  margin-left: 8.2rem;
+  margin-right: 1.9rem;
+}
+
+.bottom-img2 {
+  margin-right: 1.9rem;
+}
+
+.bottom-img3 {
+  margin-right: 1.9rem;
+}
+
+/*Bottom-slider
+==========*/
+/* Slider
+==========*/
+.bottom-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-slider input[name="bottom-switch"] {
+  display: none;
+}
+
+.bottom-switch {
+  position: absolute;
+  left: 15%;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  padding-top: 4rem;
+  padding-right: 30%;
+}
+
+.bottom-switch label {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  border: 0.1rem solid #000;
+}
+
+.bottom-switch label:hover {
+  background-color: #000;
+}
+
+#button1:checked ~ .bottom-switch label[for="button1"] {
+  background-color: black;
+}
+
+#button2:checked ~ .bottom-switch label[for="button2"] {
+  background-color: black;
+}
+
+#button3:checked ~ .bottom-switch label[for="button3"] {
+  background-color: black;
 }
