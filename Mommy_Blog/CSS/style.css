@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 15px;
 }
@@ -723,12 +724,11 @@ h6 {
 
 .bottom-switch {
   position: absolute;
-  left: 15%;
+  left: 0;
   top: 0;
   text-align: center;
   width: 100%;
   padding-top: 4rem;
-  padding-right: 30%;
 }
 
 .bottom-switch label {
@@ -755,4 +755,114 @@ h6 {
 
 #button3:checked ~ .bottom-switch label[for="button3"] {
   background-color: black;
+}
+
+/* Bottom-form
+==========*/
+.bottom-form {
+  display: block;
+  width: 100%;
+  min-height: 13.1rem;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  background-image: url("../images/Детский-прием-у-стоматолога.png");
+  background-size: cover;
+}
+
+.input-bottom-form {
+  display: inline-block;
+  margin-top: 4.7rem;
+  padding: 0.8rem 18rem 0.9rem 0;
+  font-family: Century Gothic;
+  font-size: 1.2rem;
+  border: 0;
+  border-bottom: 0.1rem solid #ffffff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.input-bottom-form::placeholder {
+  color: #fff;
+}
+
+.input-bottom-form:nth-child(1) {
+  margin-left: 8.2rem;
+}
+
+.input-bottom-form:nth-child(2) {
+  margin-left: 1.8rem;
+}
+
+.bottom-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  width: 100%;
+  max-width: 11.3rem;
+  height: 3.3rem;
+  border-radius: 1.6rem;
+  border: 0;
+  font-family: Century Gothic;
+  font-size: 1.3rem;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.bottom-btn:hover {
+  background-color: #417936;
+}
+
+.bottom-btn:active {
+  background-color: #44d427;
+}
+
+/*Footer-nav
+==========*/
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.footer-nav-left {
+  margin-left: 8.2rem;
+  padding-right: 5%;
+}
+
+.footer-nav-right {
+  margin-right: 5.7rem;
+  padding-left: 5%;
+}
+
+.footer-nav-link {
+  display: inline-block;
+  padding-right: 2.5rem;
+  font-size: 1.1rem;
+  font-family: Century Gothic;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Footer-bottom
+==========*/
+.footer-bottom {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.footer-copy {
+  display: block;
+  width: 50%;
+  margin-left: 8.2rem;
+  justify-content: start;
+}
+
+.footer-links {
+  display: block;
+  width: 50%;
+  text-align: end;
+  padding-right: 8rem;
 }
