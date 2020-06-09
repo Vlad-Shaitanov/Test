@@ -1,0 +1,38 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body {
+	font-size: 15px;
+	background-color: #d3d1ce;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	min-width: 30rem;
+	margin: 20% auto 0;
+	background-color: #413d3d;
+}
+.red,
+.green,
+.blue {
+	display: block;
+	flex-grow: 1;
+	flex-basis: 0;
+	height: 10rem;
+	border: 0.1rem solid #fff;
+}
+.red {
+	background-color: #f80d0d;
+}
+.green {
+	background-color: #80ff00;
+}
+.blue {
+	background-color: #0345f8;
+}
