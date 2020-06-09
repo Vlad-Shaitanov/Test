@@ -81,6 +81,10 @@ h6 {
 		top: 33%;
 		left: 9%;
 	}
+	&:hover {
+		transform: rotate(360deg);
+		transition: transform 0.3s linear;
+	}
 }
 .header-links {
 	display: inline;
@@ -102,6 +106,10 @@ h6 {
 	font-family: Century Gothic;
 	text-decoration: none;
 	color: #fff;
+	&:hover {
+		color: #04e7c9;
+		transition: color 0.2s linear;
+	}
 }
 .logo {
 	position: absolute;
@@ -419,6 +427,7 @@ h6 {
 
 .feedback-form {
 	display: flex;
+	width: 100%;
 }
 .form2 {
 	width: 49%;
@@ -450,7 +459,7 @@ h6 {
 
 	border: 0;
 	border-bottom: 0.1rem solid #ffffff;
-	background-color: #7a7a78;
+	background-color: transparent;
 	color: #070707;
 	&::placeholder {
 		color: #fff;
@@ -783,6 +792,10 @@ h6 {
 	font-family: Century Gothic;
 	text-decoration: none;
 	color: #000;
+	&:hover {
+		color: #04e7c9;
+		transition: color 0.2s linear;
+	}
 }
 /* Footer-bottom
 ==========*/
@@ -803,6 +816,29 @@ h6 {
 	width: 50%;
 	text-align: end;
 	padding-right: 8rem;
+	position: relative;
+}
+.footer-link {
+	display: inline;
+	&:nth-child(1) {
+		position: absolute;
+		top: 33%;
+		right: 24%;
+	}
+	&:nth-child(2) {
+		position: absolute;
+		top: 33%;
+		right: 17%;
+	}
+	&:nth-child(3) {
+		position: absolute;
+		top: 33%;
+		right: 10%;
+	}
+	&:hover {
+		transform: rotate(360deg);
+		transition: transform 0.3s linear;
+	}
 }
 
 //*========== Media ==========/
@@ -871,7 +907,6 @@ h6 {
 
 	/* Slider
 ==========*/
-
 	.switch {
 		position: absolute;
 		left: 40%;
@@ -889,7 +924,6 @@ h6 {
 
 	/*Firstblock
 ==========*/
-
 	.firstblock-img {
 		margin-left: 4.5rem;
 	}
@@ -897,9 +931,9 @@ h6 {
 		margin-left: 4.5rem;
 		margin-right: 6rem;
 	}
+
 	/*Secondblock
 ==========*/
-
 	.secondblock-img {
 		margin-left: 6rem;
 	}
@@ -907,8 +941,24 @@ h6 {
 		margin-left: 4.5rem;
 	}
 
+	/* Thirdblock
+==========*/
+	.thirdblock-img {
+		margin-left: 4.5rem;
+	}
+	.thirdblock-text {
+		margin-left: 4.5rem;
+		margin-right: 6rem;
+	}
+
 	/* Feedback-form
 ==========*/
+
+	.form2 {
+		width: 50%;
+		padding-left: 4.5rem;
+		background-color: #7a7a78;
+	}
 	.feedback-form-img {
 		display: block;
 		height: auto;
@@ -917,8 +967,85 @@ h6 {
 
 	/*Image-group
 ==========*/
-
 	.image-group {
-		margin-left: 5rem;
+		margin-left: 4.5rem;
+	}
+	.img-two {
+		left: 25.5rem;
+	}
+	.img-three {
+		left: 51rem;
+	}
+	.img-four {
+		top: 25.7rem;
+		left: 0;
+	}
+	.img-five-outer {
+		top: 40.5rem;
+		left: 25.5rem;
+	}
+	.img-six {
+		top: 25.7rem;
+		left: 51rem;
+	}
+
+	/* Category button
+==========*/
+
+	.category-btn {
+		margin: 0 43%;
+	}
+
+	//*========== Bottom ==========/
+
+	.bottom-img1 {
+		margin-left: 4.5rem;
+		margin-right: 1.35rem;
+	}
+	.bottom-img2 {
+		margin-right: 1.35rem;
+	}
+	.bottom-img3 {
+		margin-right: 1.35rem;
+	}
+
+	/* Bottom-form
+==========*/
+
+	.bottom-form {
+		min-height: 12rem;
+		background-size: 100% auto;
+	}
+	.input-bottom-form {
+		margin-top: 4.7rem;
+		padding: 0.8rem 18rem 0.9rem 0;
+		&:nth-child(1) {
+			margin-left: 4.5rem;
+		}
+	}
+
+	//*==========Footer==========/
+
+	/*Footer-nav
+==========*/
+
+	.footer-nav-left {
+		margin-left: 4.5rem;
+	}
+	.footer-nav-right {
+		margin-right: 1.5rem;
+	}
+
+	/* Footer-bottom
+==========*/
+
+	.footer-copy {
+		margin-left: 4.5rem;
+	}
+	.footer-links {
+		display: block;
+		width: 50%;
+		text-align: end;
+		padding-right: 4rem;
 	}
 }
