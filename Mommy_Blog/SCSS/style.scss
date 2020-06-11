@@ -163,7 +163,6 @@ h6 {
 	border: 0;
 	font-family: inherit;
 	font-size: 1.3rem;
-
 	color: #fff;
 	background-color: #000;
 	cursor: pointer;
@@ -468,6 +467,8 @@ h6 {
 
 .feedback-form-img {
 	width: 51%;
+	background: url("/Mommy_Blog/images/400379908_1__02.png") no-repeat;
+	background-size: 100% auto;
 }
 .form2-btn {
 	display: block;
@@ -957,12 +958,29 @@ h6 {
 	.form2 {
 		width: 50%;
 		padding-left: 4.5rem;
-		background-color: #7a7a78;
+		> h2 {
+			margin-top: 3rem;
+			margin-bottom: 1.3rem;
+			font-family: Century Gothic;
+			font-size: 2rem;
+			color: #fff;
+			line-height: 2.5rem;
+			position: relative;
+			> span {
+				font-size: 3.5rem;
+			}
+		}
 	}
 	.feedback-form-img {
+		width: 50%;
+	}
+	.form2-btn {
 		display: block;
-		height: auto;
-		width: auto;
+		margin-top: 3rem;
+		margin-bottom: 5rem;
+		max-width: 15.8rem;
+		height: 3.3rem;
+		font-size: 1.3rem;
 	}
 
 	/*Image-group
@@ -1047,5 +1065,334 @@ h6 {
 		width: 50%;
 		text-align: end;
 		padding-right: 4rem;
+	}
+}
+
+@media (max-width: 68.3rem) {
+	.container {
+		max-width: 68.3rem;
+	}
+	.page {
+		max-width: 68.3rem;
+	}
+
+	//*========== Top ==========
+
+	.top {
+		width: 100%;
+		max-width: 93.7rem;
+		min-height: 35rem;
+	}
+
+	/* Header
+==========*/
+	.header {
+		padding-bottom: 4rem;
+	}
+	.header-link {
+		display: block;
+		&:nth-child(1) {
+			left: 1%;
+		}
+		&:nth-child(2) {
+			left: 4.4%;
+		}
+		&:nth-child(3) {
+			left: 7.6%;
+		}
+	}
+
+	/* Navigation
+==========*/
+	.nav-left {
+		padding-left: 3%;
+		padding-right: 1%;
+	}
+	.nav-right {
+		padding-left: 10%;
+	}
+	.nav-link {
+		display: inline-block;
+		padding-right: 1rem;
+		font-size: 1rem;
+	}
+	.logo {
+		transform: scale(0.7);
+	}
+	.top-text {
+		display: block;
+		font-family: Century Gothic;
+		> h2 {
+			margin: 5% auto 2.3rem;
+			padding-left: 2%;
+			font-size: 2.4rem;
+			&:after {
+				content: "";
+				bottom: -40%;
+				right: 47%;
+			}
+		}
+		> h4 {
+			display: block;
+			margin: 0 auto 3rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	/* Slider
+==========*/
+
+	.switch {
+		position: absolute;
+		left: 40%;
+		top: 0;
+		text-align: center;
+		width: 100%;
+		padding-right: 35%;
+		transform: rotate(90deg);
+		label {
+			display: inline-block;
+			width: 0.7rem;
+			height: 0.7rem;
+			margin: 0 0.3rem;
+		}
+	}
+
+	//*========== Main ==========/
+
+	/*Firstblock
+==========*/
+
+	.firstblock {
+		margin-top: 2rem;
+		margin-bottom: 0;
+	}
+	.firstblock-img {
+		margin-left: 0.1rem;
+		transform: scale(0.8);
+	}
+	.firstblock-text {
+		max-width: 33.2rem;
+		margin-left: 0.1rem;
+		margin-right: 5rem;
+		> p {
+			font-size: 1rem;
+			line-height: 1.6rem;
+		}
+	}
+	.firstblock-text-title {
+		margin-top: 6rem;
+		margin-bottom: 3rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		> span {
+			font-size: 2.5rem;
+		}
+		&:after {
+			top: 5rem;
+			left: 0.2rem;
+		}
+	}
+	.firstblock-btn {
+		max-width: 14.5rem;
+		height: 3.3rem;
+		border-radius: 1.6rem;
+		font-size: 1.1rem;
+	}
+	/*Secondblock
+==========*/
+
+	.secondblock {
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+	.secondblock-img {
+		margin-left: 0.1rem;
+		transform: scale(0.8);
+	}
+	.secondblock-text {
+		max-width: 33.2rem;
+		margin-left: 4rem;
+		> p {
+			font-size: 1rem;
+			line-height: 1.6rem;
+		}
+	}
+	.secondblock-text-title {
+		margin-top: 6rem;
+		margin-bottom: 3.3rem;
+		font-size: 2rem;
+		line-height: 2rem;
+		> span {
+			font-size: 2.5rem;
+		}
+		&:after {
+			top: 5rem;
+			left: 0.2rem;
+		}
+	}
+	.secondblock-btn {
+		max-width: 14.5rem;
+		height: 3.3rem;
+		font-size: 1.1rem;
+	}
+
+	/*Thirdblock
+==========*/
+
+	.thirdblock {
+		margin-top: 2rem;
+		margin-bottom: 0;
+	}
+	.thirdblock-img {
+		margin-left: 0.1rem;
+		transform: scale(0.8);
+	}
+	.thirdblock-text {
+		max-width: 33.2rem;
+		margin-left: 0.1rem;
+		margin-right: 5rem;
+		> p {
+			font-size: 1rem;
+			line-height: 1.6rem;
+		}
+	}
+	.thirdblock-text-title {
+		margin-top: 6rem;
+		margin-bottom: 3rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		> span {
+			font-size: 2.5rem;
+		}
+		&:after {
+			top: 5rem;
+			left: 0.2rem;
+		}
+	}
+	.thirdblock-btn {
+		max-width: 14.5rem;
+		height: 3.3rem;
+		border-radius: 1.6rem;
+		font-size: 1.1rem;
+	}
+
+	/* Feedback-form
+==========*/
+
+	.feedback-form {
+		display: flex;
+		width: 100%;
+		max-width: 68.3rem;
+	}
+	.form2 {
+		// width: 49%;
+		padding-left: 4rem;
+		> h2 {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			font-size: 1.5rem;
+			line-height: 2rem;
+			> span {
+				font-size: 2rem;
+			}
+		}
+	}
+	.input-feedback-form {
+		margin-bottom: 1rem;
+		padding: 0.5rem 15rem 0.8rem 0;
+		font-size: 1rem;
+	}
+	.feedback-form-img {
+		width: 50%;
+		max-width: 34.1rem;
+	}
+	.form2-btn {
+		margin-top: 2.5rem;
+		margin-bottom: 4.5rem;
+		max-width: 14.5rem;
+		height: 3.3rem;
+		font-size: 1.1rem;
+	}
+	/*Image-group
+==========*/
+
+	.image-group {
+		margin-left: 3.5rem;
+		margin-bottom: 75rem;
+		position: relative;
+	}
+	.img-one {
+		position: absolute;
+		top: 0;
+		left: -2rem;
+		transform: scale(0.8);
+	}
+	.img-two {
+		position: absolute;
+		top: -1.5rem;
+		left: 18.5rem;
+		transform: scale(0.8);
+	}
+	.img-three {
+		position: absolute;
+		top: 0;
+		left: 39rem;
+		transform: scale(0.8);
+	}
+	.img-four {
+		position: absolute;
+		top: 26.5rem;
+		left: 0;
+		transform: scale(0.8);
+	}
+	.img-five-outer {
+		display: inline;
+		position: absolute;
+		top: 41rem;
+		left: 26.5rem;
+		transform: scale(0.8);
+	}
+	.five-img {
+		display: inline;
+		position: relative;
+	}
+	.img-title {
+		font-family: Century Gothic;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: #fff;
+
+		position: absolute;
+		left: 3.8rem;
+		bottom: 9.5rem;
+		> span {
+			font-size: 2.7rem;
+			font-weight: 700;
+		}
+		&:after {
+			content: "";
+			height: 0.1rem;
+			width: 3.7rem;
+			background-color: #fff;
+			position: absolute;
+			top: 6rem;
+			left: 0;
+		}
+	}
+	.img-five-link {
+		text-decoration: none;
+		font-family: Century Gothic;
+		font-size: 1.4rem;
+		color: #fff;
+		position: absolute;
+		left: 3.8rem;
+		bottom: 6.4rem;
+	}
+	.img-six {
+		position: absolute;
+		top: 26.5rem;
+		left: 53rem;
+		transform: scale(0.8);
 	}
 }
