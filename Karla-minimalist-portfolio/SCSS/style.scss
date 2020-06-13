@@ -1,0 +1,330 @@
+html {
+	font-size: 15px;
+}
+
+body {
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	font-family: "Karla", sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+.page {
+	width: 100vw;
+	max-width: 127rem;
+	margin: 0;
+	background-color: #fff;
+}
+
+/* Header */
+
+.header {
+	width: 100vw;
+	max-width: 127rem;
+	min-height: 14.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+/* Nav */
+.nav {
+	width: 50%;
+}
+.nav-link {
+	padding: 0 1.3rem;
+	font-weight: 400;
+	font-size: 2rem;
+	color: #000;
+	text-decoration: none;
+	&:last-child {
+		margin-right: 6.6rem;
+	}
+	&:hover {
+		border-bottom: 0.1rem solid #000;
+	}
+}
+.nav-link.active {
+	font-weight: 700;
+}
+
+/* Content */
+
+.container {
+	width: 100%;
+	max-width: 127rem;
+}
+
+/* Gallery */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+}
+.gall-img {
+	width: 50%;
+}
+.small {
+	width: 25%;
+}
+.gall-expand {
+	display: block;
+	margin: 3.6rem auto 12rem;
+	font-size: 2.1rem;
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+}
+
+/* What i do */
+
+.whatido {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0 auto 18rem;
+	max-width: 109.4rem;
+}
+.whatido-title {
+	width: 50%;
+	padding-left: 11rem;
+	font-size: 5.1rem;
+	font-weight: 400;
+	color: #000;
+	text-decoration: none;
+	position: relative;
+	&:after {
+		content: "";
+		height: 0.1rem;
+		width: 6.6rem;
+		background-color: #000;
+		position: absolute;
+		right: -3rem;
+		top: 4rem;
+		transform: rotate(90deg);
+	}
+}
+.whatido-text {
+	width: 50%;
+	padding-left: 10rem;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+.column-img {
+	display: block;
+	margin-top: 12rem;
+}
+.column-title {
+	display: block;
+	margin-top: 3.3rem;
+	font-family: "Karla", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+}
+.column-text {
+	display: block;
+	width: 44.7rem;
+	margin-top: 47px;
+	padding: 0 0 0.6rem 1.6rem;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+.whatido-list {
+	display: block;
+	padding: 13rem 8rem 0;
+}
+.whatido-list-item {
+	margin-bottom: 5.4rem;
+	padding-left: 25rem;
+	font-family: "Karla", sans-serif;
+	font-size: 2.2rem;
+	font-weight: 400;
+	text-align: center;
+	list-style: none;
+
+	background: url("../img/light-box.jpg") no-repeat left;
+}
+.whatido-list-item.active {
+	background: url("../img/grey-box.jpg") no-repeat left;
+	font-weight: 700;
+}
+
+/* About me */
+
+.about {
+	display: flex;
+	width: 100%;
+	max-width: 109rem;
+	margin: 0 auto 19rem;
+}
+.about-img {
+	display: block;
+	width: 50%;
+	max-width: 44rem;
+}
+.about-title {
+	display: block;
+	margin-bottom: 5rem;
+	font-family: "Karla", sans-serif;
+	font-weight: 400;
+	font-size: 5.1rem;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+}
+.about-text {
+	display: block;
+	width: 50%;
+	margin: 0 0 0 19rem;
+	position: relative;
+	> p {
+		display: block;
+		margin: 0 auto;
+		font-family: "Open Sans", sans-serif;
+		font-weight: 300;
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
+	&:after {
+		content: "";
+		height: 0.1rem;
+		width: 7rem;
+		background-color: #000;
+		position: absolute;
+		left: -11rem;
+		top: 50px;
+		transform: rotate(90deg);
+	}
+}
+
+/* Contact */
+
+.contact {
+	display: flex;
+}
+.contact-text {
+	width: 50%;
+	margin: 0 auto;
+}
+.contact-title {
+	display: block;
+	font-size: 5.1rem;
+	font-family: "Karla", sans-serif;
+	font-weight: 400;
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+}
+.contact-info {
+	display: block;
+	text-align: center;
+}
+.phone,
+.email {
+	display: inline;
+}
+.adress-title,
+.phone-title,
+.email-title {
+	font-family: "Karla", sans-serif;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+/* Form */
+
+.form {
+	width: 50%;
+}
+.form-group {
+	width: 100%;
+	max-width: 46rem;
+	margin-left: 7.5rem;
+	padding-right: 5rem;
+}
+.input,
+.textarea {
+	display: block;
+	width: 100%;
+	max-width: 46.6rem;
+	padding: 0.7rem;
+	font-size: 1.6rem;
+	background-color: #ececec;
+}
+.textarea {
+	height: 17rem;
+	resize: none;
+}
+.label {
+	font-family: "Karla", sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+.btn {
+	display: inline-block;
+	width: 100%;
+	margin-top: 2rem;
+	padding: 2rem 2rem 0;
+	font-family: "Karla", sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
+	text-align: center;
+	background-color: #fff;
+	cursor: pointer;
+	&:hover {
+		background-color: #dad8d8;
+	}
+}
+
+//*========== Media ==========/
+
+@media (max-width: 85.3rem) {
+	.page {
+		width: 100vw;
+		max-width: 85.3rem;
+	}
+
+	/* Header */
+
+	.header {
+		width: 100vw;
+		max-width: 85.3rem;
+		min-height: 10rem;
+	}
+
+	/* Nav */
+	.nav {
+		width: 50%;
+	}
+	.nav-link {
+		padding: 0 0.6rem;
+		font-weight: 400;
+		font-size: 1.4rem;
+		&:hover {
+			border-bottom: 0.1rem solid #000;
+		}
+	}
+}
