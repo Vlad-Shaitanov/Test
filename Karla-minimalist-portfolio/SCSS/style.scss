@@ -129,6 +129,13 @@ h6 {
 	font-size: 1.2rem;
 	font-weight: 300;
 }
+.column-block {
+	display: flex;
+	width: 100%;
+}
+.column {
+	width: 50%;
+}
 .column-img {
 	display: block;
 	margin-top: 12rem;
@@ -153,6 +160,7 @@ h6 {
 	font-weight: 300;
 }
 .whatido-list {
+	width: 50%;
 	display: block;
 	padding: 13rem 8rem 0;
 }
@@ -325,6 +333,94 @@ h6 {
 		font-size: 1.4rem;
 		&:hover {
 			border-bottom: 0.1rem solid #000;
+		}
+	}
+
+	/* Content */
+
+	.container {
+		max-width: 85.3rem;
+	}
+
+	/* What i do */
+
+	.whatido {
+		margin: 0 auto 9rem;
+	}
+	.whatido-title {
+		font-size: 4.8rem;
+	}
+	.whatido-text {
+		width: 50%;
+		padding-left: 6rem;
+		padding-right: 6rem;
+		font-size: 1rem;
+	}
+	.column-img {
+		display: block;
+		margin-top: 8rem;
+		transform: scale(0.8);
+	}
+	.whatido-list {
+		padding: 9.5rem 2rem 0;
+	}
+	.whatido-list-item {
+		margin-bottom: 2rem;
+		padding: 0 0 0 18rem;
+		font-size: 2.2rem;
+		text-align: center;
+		background: url("../img/light-box.jpg") no-repeat left;
+		&:hover {
+			background: url("/Karla-minimalist-portfolio/img/grey-box.jpg") no-repeat left;
+			font-weight: 700;
+		}
+	}
+	.whatido-list-item.active {
+		background: url("../img/grey-box.jpg") no-repeat left;
+	}
+	.column-text {
+		display: block;
+		width: 42rem;
+		margin-top: 47px;
+		padding: 0 0 0.6rem 4.5rem;
+		font-size: 1rem;
+	}
+
+	/* About me */
+
+	.about {
+		max-width: 85.3rem;
+		margin: 0 auto 19rem;
+	}
+	.about-img {
+		display: block;
+		width: 47%;
+		max-width: 100%;
+		height: auto;
+	}
+	.about-title {
+		display: block;
+		margin-bottom: 5rem;
+		font-size: 4.1rem;
+	}
+	.about-text {
+		width: 50%;
+		margin: 0 0 0 19rem;
+		> p {
+			display: block;
+			margin: 0 auto;
+			font-size: 1rem;
+			line-height: 2rem;
+		}
+		&:after {
+			content: "";
+			height: 0.1rem;
+			width: 7rem;
+			background-color: #000;
+			position: absolute;
+			left: 0;
+			top: 50px;
+			transform: rotate(90deg);
 		}
 	}
 }
