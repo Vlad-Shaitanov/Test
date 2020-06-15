@@ -186,6 +186,7 @@ h6 {
   font-weight: 400;
   text-align: center;
   list-style: none;
+  white-space: nowrap;
   background: url("../img/light-box.jpg") no-repeat left;
 }
 
@@ -249,6 +250,7 @@ h6 {
 /* Contact */
 .contact {
   display: flex;
+  margin-bottom: 3rem;
 }
 
 .contact-text {
@@ -282,6 +284,18 @@ h6 {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   margin-bottom: 1rem;
+}
+
+.phone-link,
+.email-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.phone-link:hover,
+.email-link:hover {
+  transform: scale(1.5);
+  color: #288afa;
 }
 
 /* Form */
@@ -321,7 +335,7 @@ h6 {
   display: inline-block;
   width: 100%;
   margin-top: 2rem;
-  padding: 2rem 2rem 0;
+  padding: 1.5rem;
   font-family: "Karla", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -331,18 +345,18 @@ h6 {
 }
 
 .btn:hover {
-  background-color: #dad8d8;
+  background-color: #77f83c;
 }
 
-@media (max-width: 85.3rem) {
+@media (max-width: 85.2rem) {
   .page {
-    width: 100vw;
-    max-width: 85.3rem;
+    width: 100%;
+    max-width: 85.2rem;
   }
   /* Header */
   .header {
-    width: 100vw;
-    max-width: 85.3rem;
+    width: 100%;
+    max-width: 85.2rem;
     min-height: 10rem;
   }
   /* Nav */
@@ -359,7 +373,20 @@ h6 {
   }
   /* Content */
   .container {
-    max-width: 85.3rem;
+    max-width: 85.2rem;
+  }
+  /* Gallery */
+  .gallery {
+    display: flex;
+    width: 100%;
+    max-width: 85.2rem;
+    flex-wrap: wrap;
+  }
+  .gall-img {
+    width: 50%;
+  }
+  .small {
+    width: 25%;
   }
   /* What i do */
   .whatido {
@@ -375,18 +402,16 @@ h6 {
     font-size: 1rem;
   }
   .column-img {
-    display: block;
     margin-top: 8rem;
     transform: scale(0.8);
   }
   .whatido-list {
-    padding: 9.5rem 2rem 0;
+    padding: 11rem 2rem 0;
   }
   .whatido-list-item {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 0 0 18rem;
     font-size: 2.2rem;
-    text-align: center;
     background: url("../img/light-box.jpg") no-repeat left;
   }
   .whatido-list-item:hover {
@@ -397,7 +422,6 @@ h6 {
     background: url("../img/grey-box.jpg") no-repeat left;
   }
   .column-text {
-    display: block;
     width: 42rem;
     margin-top: 47px;
     padding: 0 0 0.6rem 4.5rem;
@@ -405,38 +429,53 @@ h6 {
   }
   /* About me */
   .about {
-    max-width: 85.3rem;
-    margin: 0 auto 19rem;
+    max-width: 85.2rem;
+    margin: 0 auto 10rem;
   }
   .about-img {
-    display: block;
+    margin: 0 2.5rem;
     width: 47%;
     max-width: 100%;
     height: auto;
+    transform: scale(0.9);
   }
   .about-title {
-    display: block;
-    margin-bottom: 5rem;
-    font-size: 4.1rem;
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 3.5rem;
   }
   .about-text {
     width: 50%;
-    margin: 0 0 0 19rem;
+    margin: 0 5rem 0 1rem;
   }
   .about-text > p {
-    display: block;
     margin: 0 auto;
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
   }
   .about-text:after {
     content: "";
     height: 0.1rem;
     width: 7rem;
-    background-color: #000;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    transform: rotate(90deg);
+    left: -7rem;
+    top: 5.5rem;
+  }
+  /* Contact */
+  .contact-title {
+    font-size: 4.8rem;
+  }
+  /* Form */
+  .form {
+    width: 50%;
+  }
+  .form-group {
+    max-width: 35rem;
+    margin-left: 2.8rem;
+    padding-right: 4.5rem;
+  }
+  .btn {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding: 1.5rem;
   }
 }
