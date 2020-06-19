@@ -415,7 +415,7 @@ h6 {
     background: url("../img/light-box.jpg") no-repeat left;
   }
   .whatido-list-item:hover {
-    background: url("/Karla-minimalist-portfolio/img/grey-box.jpg") no-repeat left;
+    background: url("../img/grey-box.jpg") no-repeat left;
     font-weight: 700;
   }
   .whatido-list-item.active {
