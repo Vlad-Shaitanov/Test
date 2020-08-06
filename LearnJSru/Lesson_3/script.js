@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let message;
 
@@ -9,9 +9,9 @@ alert(message);
 
 //---------TASK
 
-let admin;
-let name = "john";
+// let admin;
+// let name = "john";
 
-admin = name;
+// admin = name;
 
-alert(admin);
+// alert(admin);
