@@ -70,24 +70,104 @@ showGreeting("Vlad");
 
 
 //---Возврат значения
-function sum(a, b) {
-	return a + b;
-}
-let result = sum(10, 15);
-console.log(result);
+// function sum(a, b) {
+// 	return a + b;
+// }
+// let result = sum(10, 15);
+// console.log(result);
+// //
 
+// function checkAge(age) {
+// 	if (age > 18) {
+// 		return true;
+// 	} else {
+// 		return confirm("А родители разрешили?");
+// 	}
+// }
+// let age = prompt("Сколько Вам лет", "");
 
-function checkAge(age) {
-	if (age > 18) {
-		return true;
+// if (checkAge(age)) {
+// 	alert("Доступ разрешен");
+// } else {
+// 	alert("Доступ закрыт!");
+// }
+
+//функция поиска простого числа (моя)
+// let n;
+// function searchSimple(n) {
+// 	for (let i = 2; i < n; i++) {
+// 		if (!searhNum(i)) {
+// 			continue;
+// 		}
+// 		console.log(i);
+// 	}
+// }
+// function searhNum(n) {
+// 	for (let i = 2; i < n; i++) {
+// 		if (n % i == 0) {
+// 			return false;
+// 		}
+// 		return true;
+// 	}
+// }
+// searchSimple(10);
+
+//поиск простого числаа из учебника
+// function showPrimes(n) {
+// 	for (let i = 2; i < n; i++) {
+// 		if (!isPrime(i)) continue;
+// 		console.log(i);  // простое
+// 	}
+// }
+// function isPrime(n) {
+// 	for (let i = 2; i < n; i++) {
+// 		if (n % i == 0) return false;
+// 	}
+// 	return true;
+// }
+// let n;
+// showPrimes(10);
+
+//----------TASKS
+
+//1)
+
+//2)
+// let lvl = +prompt("What's your lvl?", "");
+// function checkLvl(lvl) {
+// 	//тернарный оператор
+// 	// return (lvl > 18) ? alert("The entrance is allowed")
+// 	// 	: confirm("Родители разрешили?");
+// 	//оператор ИЛИ
+// 	return (lvl > 18) || confirm("Родители разрешили?");
+// }
+// checkLvl(lvl);
+
+//3) возврат меньшего числа
+let a,
+	b;
+function min(a, b) {
+	if (a < b) {
+		return a;
 	} else {
-		return confirm("А родители разрешили?");
+		return b;
 	}
 }
-let age = prompt("Сколько Вам лет", "");
+console.log(min(7, 3));
 
-if (checkAge(age)) {
-	alert("Доступ разрешен");
-} else {
-	alert("Доступ закрыт!");
+
+//4) квадрат числа
+let x = +prompt("Введите число", ""),
+	n = +prompt("Введите значение степени числа");
+function pow(x, n) {
+	if (n >= 1) {
+		let result = x;
+		for (let i = 1; i < n; i++) {
+			result *= x;
+		}
+		return result;
+	} else {
+		return prompt(`Степень ${n} не поддерживается, введите новое число`);
+	}
 }
+alert(pow(x, n));
