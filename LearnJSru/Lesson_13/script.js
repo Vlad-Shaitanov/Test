@@ -75,3 +75,19 @@ function sum(a, b) {
 }
 let result = sum(10, 15);
 console.log(result);
+
+
+function checkAge(age) {
+	if (age > 18) {
+		return true;
+	} else {
+		return confirm("А родители разрешили?");
+	}
+}
+let age = prompt("Сколько Вам лет", "");
+
+if (checkAge(age)) {
+	alert("Доступ разрешен");
+} else {
+	alert("Доступ закрыт!");
+}
