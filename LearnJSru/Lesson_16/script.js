@@ -56,3 +56,14 @@ function makeUser(name, age) {
 }
 let user = makeUser("Fred", 30);
 console.log(user.name);
+
+
+
+//----------TASKS
+
+//1)
+let currentUser = {};
+currentUser.name = "John";
+currentUser.surname = "Smith";
+currentUser.name = "Pete";
+delete currentUser.name;
