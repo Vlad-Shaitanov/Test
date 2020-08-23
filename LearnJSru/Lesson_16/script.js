@@ -47,7 +47,7 @@ let garage = {//ключом является значение из переме
 };
 console.log(garage);
 
-
+//?Свойство из переменной
 function makeUser(name, age) {
 	return {
 		name, // то же, что и name: name
@@ -58,8 +58,65 @@ let user = makeUser("Fred", 30);
 console.log(user.name);
 
 
+//?Проверка существования св-ва
+let color = {
+	wall: "white",
+	floor: "red",
+	door: "brown",
+};
+console.log(color.window === undefined);
+/*получили релультат true, значит св-ва window в объекте нет*/
+console.log("wall" in color);//true, св-во существует в объекте
+console.log("window" in color);//false, св-во отсутствует
+let part = "wall";//переменная имеет значение, равное св-ву в объекте
+console.log(part in color);
 
-//----------TASKS
+//? Цикл for in
+let player = {
+	account: "study",
+	lvl: 100,
+	numOfChars: 3,
+};
+for (let key in player) {
+	//выводит ключи
+	console.log(key);
+	//выводит значения ключей
+	console.log(player[key]);
+}
+
+//? Копирование по ссылке
+let box = {
+	toy: true,
+};
+let thing = box;
+console.log(box.toy);
+thing.toy = false; // изменено по ссылке из переменной "thing"
+console.log(box.toy); // изменено по ссылке из переменной "box"
+
+
+//?Сравнение объектов
+let a = {};
+let b = a;
+console.log(a == b);//true, один и тот же объект
+
+let c = {};
+let d = {};
+console.log(c == d);//false, разные объекты
+
+
+//? Упорядочивание св-в объекта
+let codes = {
+	"+49": "Германия",
+	"+41": "Швейцария",
+	"+44": "Великобритания",
+	"+1": "США",
+};
+for (let code in codes) {
+	console.log(+code);
+}
+
+
+//?----------TASKS
 
 //1)
 let currentUser = {};
