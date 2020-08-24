@@ -115,6 +115,47 @@ for (let code in codes) {
 	console.log(+code);
 }
 
+//?Клонирование и объединение объектов, Object.assign
+let house = {
+	address: "street",
+	rooms: 3,
+	chears: 2,
+	tables: 1
+};
+let duplicateHouse = {};//создали новый объект
+for (let key in house) {//копируем все св-ва из house в него
+	duplicateHouse[key] = house[key];
+}
+console.log(house);
+console.log(duplicateHouse);
+house.rooms = 1;
+console.log(house);
+console.log(duplicateHouse);
+/*После изменения значения одного из свойств в house, мы видим, что
+house и duplicateHouse теперь разные независимые объекты*/
+
+//Объединим несколько объектов в один:
+let acessories = {
+	head: "tiara"
+};
+let arm = {
+	rings: "gold"
+};
+let legs = {
+	bracelet: "gold"
+};
+Object.assign(acessories, arm, legs);
+console.log(acessories);//Св-ва из arm и legs скопированы в acessories
+
+
+//клонируем объект при помощи Object.assign
+let school = {
+	classrooms: true
+};
+let cloneSchool = Object.assign({}, school);
+console.log(school);
+console.log(cloneSchool);
+
 
 //?----------TASKS
 
@@ -124,3 +165,17 @@ currentUser.name = "John";
 currentUser.surname = "Smith";
 currentUser.name = "Pete";
 delete currentUser.name;
+
+//2)
+function isEmpty(object) {
+	for (let key in object) {
+		//если тело цикла начало выполняться, значит объект не пустой
+		return false;
+	}
+	return true;
+}
+let sky = {};
+let sea = {
+	birds: true
+};
+console.log(isEmpty(sea));
