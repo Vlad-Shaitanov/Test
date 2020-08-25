@@ -179,3 +179,32 @@ let sea = {
 	birds: true
 };
 console.log(isEmpty(sea));
+
+//3)
+let salaries = {
+	John: 100,
+	Ann: 160,
+	Pete: 130
+};
+let sum = 0;
+for (let key in salaries) {
+	//если идет перебор, значит объект не пустой
+	sum += salaries[key];
+}
+console.log(sum);
+
+//4)
+let menu = {
+	width: 200,
+	height: 300,
+	title: "My menu"
+};
+function multiplyNumeric(obj) {
+	for (let key in obj) {
+		if (typeof (obj[key]) == "number") {
+			obj[key] *= 2;
+		}
+	}
+}
+multiplyNumeric(menu);
+console.log(menu);
