@@ -18,3 +18,26 @@ function checkAlive(health) {
 	}
 }
 console.log(checkAlive(-3));
+
+
+/*Make a function that will return a greeting
+statement that uses an input; your program should return, "Hello, <name> how are you doing today?".*/
+function greet(name) {
+	return (
+		`Hello, ${name} how are you doing today?`
+	);
+}
+console.log(greet("Pete"));
+
+
+/*The cockroach is one of the fastest insects. Write a function which takes its speed in
+km per hour and returns it in cm per second, rounded down to the integer (= floored).
+For example:
+cockroachSpeed(1.08) == 30
+Note! The input is a Real number (actual type is language dependent) and is >= 0.
+The result should be an Integer.*/
+function cockroachSpeed(s) {
+	s *= 27.777778;
+	return Math.floor(s);
+}
+console.log(cockroachSpeed(1.08));
