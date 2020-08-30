@@ -87,3 +87,46 @@ var copaDelReyGoals = 5;
 
 var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
 console.log(totalGoals);
+
+
+/*Suppose that the falling speed of a petal is 5 centimeters per second
+(5 cm/s), and it takes 80 seconds for the petal to reach the ground from a
+certain branch.
+Write a function that receives the speed (in cm/s) of a petal as input, and
+returns the time it takes for that petal to reach the ground from the
+same branch.
+
+Notes:
+The movement of the petal is quite complicated, so in this case we can see
+the velocity as a constant during its falling.
+Pay attention to the data types.
+If the initial velocity is non-positive, the return value should be 0*/
+function sakuraFall(v) {
+	let t = 0;
+	if (v <= 0) {
+		return t;
+	} else {
+		return t = 400 / v;
+	}
+}
+console.log(sakuraFall(5));
+
+
+/*Nathan loves cycling.
+Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of
+water per hour of cycling.
+You get given the time in hours and you need to return the number of litres
+Nathan will drink, rounded to the smallest value.
+
+For example:
+time = 3 ----> litres = 1
+time = 6.7---> litres = 3
+time = 11.8--> litres = 5*/
+function litres(time) {
+	if (time >= 0) {
+		return (Math.floor(time * 0.5));
+	} else {
+		return 0;
+	}
+}
+console.log(litres(3));
