@@ -23,7 +23,38 @@ for (let i = 0; i < 2; i++) {
 		console.log("DONE");
 	}
 }
-console.log(appData.expenses);
+
+// Переписываем цикл при помощи WHILE
+// let count = 0;
+// while (count < 2) {
+// 	let c = prompt("Введите обязательную статью расходов в этом месяце", ""),
+// 		d = prompt("Во сколько обойдется?", "");
+
+// 	if ((typeof (c)) === "string" && (typeof (c)) != null &&
+// 		typeof (d) != null && c != "" && d != "" && c.length <= 50) {
+// 		appData.expenses[c] = d;
+// 		console.log("DONE");
+// 	}
+// 	count++;
+// }
+
+
+//Переписываем цикл при помощи DO...WHILE
+// let i = 0;
+// do {
+// 	let e = prompt("Введите обязательную статью расходов в этом месяце", ""),
+// 		f = prompt("Во сколько обойдется?", "");
+
+// 	if ((typeof (e)) === "string" && (typeof (e)) != null &&
+// 		typeof (f) != null && e != "" && f != "" && e.length <= 50) {
+// 		appData.expenses[e] = f;
+// 		console.log("DONE");
+// 	}
+// 	i++;
+// } while (i < 2);
+
+
+console.log(appData);
 appData.moneyPerDay = Math.round(appData.budget / 30);
 
 if (appData.moneyPerDay > 100 && appData.moneyPerDay < 1000) {
