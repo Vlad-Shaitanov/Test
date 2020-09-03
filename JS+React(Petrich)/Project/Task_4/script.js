@@ -42,18 +42,24 @@ chooseExpenses();
 
 console.log(appData);
 //округление до 1 знака после запятой
-appData.moneyPerDay = ((appData.budget / 30)).toFixed(1);
-
-if (appData.moneyPerDay > 100 && appData.moneyPerDay < 1000) {
-	console.log("Похоже, что Вы бедный студент)");
-} else if (appData.moneyPerDay > 1000 && appData.moneyPerDay < 2000) {
-	console.log("Уже неплохо)");
-} else if (appData.moneyPerDay > 2000) {
-	console.log("Ого, да Вы боярин)");
-} else {
-	console.log("Что-то тут не так!");
+function detectDayBudget() {
+	appData.moneyPerDay = ((appData.budget / 30)).toFixed(1);
+	alert(`Бюджет за один день равен: ${appData.moneyPerDay} рублей(-я)`);
+	detectLevel();
 }
-alert(`Бюджет за один день равен: ${appData.moneyPerDay} рублей(-я)`);
+detectDayBudget();
+
+function detectLevel() {
+	if (appData.moneyPerDay > 100 && appData.moneyPerDay < 1000) {
+		console.log("Похоже, что Вы бедный студент)");
+	} else if (appData.moneyPerDay > 1000 && appData.moneyPerDay < 2000) {
+		console.log("Уже неплохо)");
+	} else if (appData.moneyPerDay > 2000) {
+		console.log("Ого, да Вы боярин)");
+	} else {
+		console.log("Что-то тут не так!");
+	}
+}
 
 function checkSavings() {
 	if (appData.savings == true) {
@@ -65,3 +71,14 @@ function checkSavings() {
 	}
 }
 checkSavings();
+
+function chooseOptExpenses() {
+	for (let i = 0; i < 3; i++) {
+		let optExpenses = prompt("Статья необязательных расходов?", "");
+		if ((typeof (optExpenses)) === "string" && optExpenses != null &&
+			optExpenses != "" && optExpenses.length <= 40) {
+			appData.optionalExpenses[i] = optExpenses;
+		}
+	}
+}
+chooseOptExpenses();
