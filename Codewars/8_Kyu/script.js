@@ -163,3 +163,23 @@ function findMultiples(integer, limit) {
 	return arr;
 }
 console.log(findMultiples(4, 27));
+
+
+
+/*It's the academic year's end, fateful moment of your school report.
+The averages must be calculated. All the students come to you and entreat you
+to calculate their average for them. Easy ! You just need to write a script.
+Return the average of the given array rounded down to its nearest integer.*/
+let marks = [2, 2, 2, 2];
+function getAverage(marks) {
+	let total = marks.reduce(function (a, b) {
+		return a + b;
+	});
+	let result = (Math.floor(total / marks.length));
+	return result;
+}
+console.log(getAverage(marks));
+
+//
+let games = ["3:1", "2:2", "0:1"];
+console.log(+games[0]);
