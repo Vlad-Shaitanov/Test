@@ -7,7 +7,7 @@
 	border: 0;
 }
 
-.wrapper {
+.container {
 	margin-left: 50px;
 }
 a {
@@ -21,6 +21,9 @@ button {
 	cursor: pointer;
 	border-radius: 20px;
 	border: 0;
-	background-color: green;
+	background-color: #008000;
 	color: #fff;
+}
+button:hover {
+	background-color: #11aa11;
 }
