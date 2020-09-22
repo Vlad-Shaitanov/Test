@@ -1,1 +1,2 @@
 1. Навигация по DOM-элементам
+2. Поиск: getElement*, querySelector*
