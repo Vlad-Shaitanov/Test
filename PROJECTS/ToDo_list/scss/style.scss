@@ -1,0 +1,36 @@
+html {
+	font-size: 15px;
+}
+body {
+	background-color: #34c6cd;
+	font-family: sans-serif;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.container {
+	margin: 0 auto;
+	padding-top: 3.3rem;
+}
+
+.important {
+	font-weight: bold;
+	color: #a40e11;
+}
+
+.todo_list {
+	max-width: 33.3rem;
+	display: block;
+	margin: 0 auto 3.3rem;
+	background-color: #ff9840;
+	padding: 2rem;
+	border-radius: 0.6rem;
+	-webkit-box-shadow: 0 0.3rem 0.8rem 0 #064274;
+	box-shadow: 0 0.3rem 0.8rem 0 #064274;
+}
+h1 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 1.3rem;
+	color: #fff;
+	font-size: 2rem;
+}
