@@ -34,3 +34,43 @@ h1 {
 	color: #fff;
 	font-size: 2rem;
 }
+.create_new_todo {
+	text-align: center;
+}
+input[text="type"] {
+	width: 25rem;
+	padding: 0.6rem;
+}
+button {
+	margin-top: 0.6rem;
+	width: 26.6rem;
+	padding: 0.6rem;
+	cursor: pointer;
+}
+.todo {
+	padding-left: 0;
+	> li {
+		padding: 1em;
+		list-style-type: none;
+	}
+	&:not(:last-child) {
+		border-bottom: 0.1rem solid #000;
+	}
+}
+input[type="checkbox"] {
+	opacity: 0;
+	position: absolute;
+}
+input[type="checkbox"],
+label {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0.33rem;
+	cursor: pointer;
+}
+input[type="checkbox"] + label {
+	&::before {
+		content: "";
+		background: #ff9840;
+	}
+}
