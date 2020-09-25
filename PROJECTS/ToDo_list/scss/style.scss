@@ -41,6 +41,10 @@ input[text="type"] {
 	width: 25rem;
 	padding: 0.6rem;
 }
+.message {
+	width: 25rem;
+	padding: 0.6rem;
+}
 button {
 	margin-top: 0.6rem;
 	width: 26.6rem;
@@ -72,5 +76,29 @@ input[type="checkbox"] + label {
 	&::before {
 		content: "";
 		background: #ff9840;
+		border-radius: 5px;
+		border: 0.2rem solid #ddd;
+		display: inline-block;
+		vertical-align: middle;
+		width: 0.6rem;
+		height: 0.6rem;
+		padding: 0.2rem;
+		margin-right: 0.6rem;
+		text-align: center;
+	}
+}
+input[type="checkbox"]:checked + label {
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 0.1rem;
+		height: 0.3rem;
+		border: solid blue;
+		border-width: 0 0.2rem 0.2rem 0;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		border-radius: 0;
+		margin: 0 1rem 0.3rem 0.3rem;
 	}
 }
