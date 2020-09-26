@@ -56,9 +56,10 @@ button {
 	> li {
 		padding: 1em;
 		list-style-type: none;
-	}
-	&:not(:last-child) {
-		border-bottom: 0.1rem solid #000;
+
+		&:not(:last-child) {
+			border-bottom: 0.1rem solid #000;
+		}
 	}
 }
 input[type="checkbox"] {
