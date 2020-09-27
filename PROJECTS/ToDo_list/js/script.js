@@ -13,6 +13,7 @@ if (localStorage.getItem("todo")) {
 
 addButton.addEventListener("click", function () {
 
+	if (!addMessage.value) return;
 	let newTodo = {
 		todo: addMessage.value,
 		checked: false,
@@ -22,17 +23,21 @@ addButton.addEventListener("click", function () {
 	todoList.push(newTodo);
 	showMessages();
 	localStorage.setItem("todo", JSON.stringify(todoList));
+	addMessage.value = "";
 });
 
 function showMessages() {
 	let showMessage = "";
+	if (todoList.length === 0) {
+		todo.innerHTML = "";
+	}
 	todoList.forEach(
 		function (item, i) {
 			showMessage += `
 			<li>
 			<input type="checkbox" id = "item_${i}" ${item.checked ? "checked" : ""}>
-			<label for = "item_${i}" class= "${item.important ? "important" : ""}">
-			${item.todo}</label>
+			<label for = "item_${i}"
+			class= "${item.important ? "important" : ""}">${item.todo}</label>
 			</li>`;
 
 			todo.innerHTML = showMessage;
@@ -55,9 +60,13 @@ todo.addEventListener("change", function (event) {
 
 todo.addEventListener("contextmenu", function (event) {
 	event.preventDefault();
-	todoList.forEach(function (item) {
+	todoList.forEach(function (item, i) {
 		if (item.todo === event.target.innerHTML) {
-			item.important = !item.important;
+			if (event.ctrlKey || event.metaKey) {//удаление элемента при нажатом Ctrl
+				todoList.splice(i, 1);
+			} else {
+				item.important = !item.important;
+			}
 			showMessages();
 			localStorage.setItem("todo", JSON.stringify(todoList));
 		}
