@@ -2,7 +2,7 @@
 
 window.addEventListener("DOMContentLoaded", () => {
 
-	//===TABs===
+	//=== TABs ===
 	let tab = document.querySelectorAll(".info-header-tab"),
 		info = document.querySelector(".info-header"),
 		tabContent = document.querySelectorAll(".info-tabcontent");
@@ -40,8 +40,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	//===Timer===
-	let deadline = "2020-10-24";//Когда истекает таймер
+	//=== Timer ===
+	let deadline = "2020-12-30";//Когда истекает таймер
 
 	function getTimeRemaining(endtime) {
 		//Разница между дедлайном и текущим временем
@@ -87,4 +87,38 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 	setClock("timer", deadline);
+
+	//=== Modal Window ===
+
+	let more = document.querySelector(".more"),
+		overlay = document.querySelector(".overlay"),
+		closeBtn = document.querySelector(".popup-close");
+
+	more.addEventListener("click", function () {
+		overlay.style.display = "block";
+		this.classList.add("more-splash");//Добавит анимацию к кнопке more
+		document.body.style.overflow = "hidden";
+	});
+
+	closeBtn.addEventListener("click", function () {
+		overlay.style.display = "none";
+		more.classList.remove("more-splash");
+		document.body.style.overflow = "";
+	});
+
+	let descriptionBtn = document.querySelectorAll(".description-btn"),
+		infoBlock = document.querySelector(".info");
+
+	infoBlock.addEventListener("click", function (event) {
+		let target = event.target;
+		if (target && target.classList.contains("description-btn")) {
+			for (let i = 0; i < descriptionBtn.length; i++) {
+				if (target == descriptionBtn[i]) {
+					overlay.style.display = "block";
+					descriptionBtn[i].classList.add("more-splash");//Добавит анимацию к кнопке more
+					document.body.style.overflow = "hidden";
+				}
+			}
+		}
+	});
 });
