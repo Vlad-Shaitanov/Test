@@ -137,6 +137,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	statusMessage.classList.add("status");
 
 	form.addEventListener("submit", function (event) {
+
 		event.preventDefault();
 
 		form.appendChild(statusMessage);
@@ -167,6 +168,47 @@ window.addEventListener("DOMContentLoaded", () => {
 
 		for (let i = 0; i < input.length; i++) {//Очистка инпутов после отправки формы
 			input[i].value = "";
+		}
+	});
+
+	let contactForm = document.querySelector("#form"),
+		contactInputs = contactForm.getElementsByTagName("input");
+
+	contactForm.addEventListener("submit", function (event) {
+		event.preventDefault();
+		contactForm.appendChild(statusMessage);
+		statusMessage.style.color = "#fff";
+
+		let request = new XMLHttpRequest();
+		request.open("POST", "server.php");
+		request.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+		let contactFormData = new FormData(contactForm);
+		console.log(contactFormData);
+		let myArr = [];
+		function saveInput() {
+			for (let i = 0; i < contactInputs; i++) {
+				myArr[i].push(contactInputs[i].value);
+			}
+		}
+		saveInput();
+
+		console.log(myArr);
+		let json = JSON.stringify(myArr);
+		request.send(json);
+
+		request.addEventListener("readystatechange", function () {//Наблюдение за состоянием запроса
+			if (request.readyState < 4) {
+				statusMessage.innerHTML = message.loading;
+			} else if (request.readyState === 4 && request.status == 200) {
+				statusMessage.innerHTML = message.success;
+			} else {
+				statusMessage.innerHTML = message.failure;
+			}
+		});
+
+		for (let i = 0; i < contactInputs.length; i++) {//Очистка инпутов после отправки формы
+			contactInputs[i].value = "";
 		}
 	});
 });
