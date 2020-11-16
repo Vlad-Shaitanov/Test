@@ -187,8 +187,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		console.log(contactFormData);
 		let myArr = [];
 		function saveInput() {
-			for (let i = 0; i < contactInputs; i++) {
-				myArr[i].push(contactInputs[i].value);
+			for (let i = 0; i < contactInputs.length; i++) {
+				myArr.push(contactInputs[i].value);
 			}
 		}
 		saveInput();
