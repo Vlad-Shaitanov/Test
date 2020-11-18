@@ -136,40 +136,57 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	statusMessage.classList.add("status");
 
-	form.addEventListener("submit", function (event) {
+	function sendForm(element) {
+		element.addEventListener("submit", function (event) {
+			event.preventDefault();
+			element.appendChild(statusMessage);
 
-		event.preventDefault();
+			let formData = new FormData(element);
+			//Этот объект будет хранить все данные, которые пользователь ввел в форму
 
-		form.appendChild(statusMessage);
+			function postData(data) {
+				return new Promise(function (resolve, reject) {
+					let request = new XMLHttpRequest();
+					request.open("POST", "server.php");
+					request.setRequestHeader("Content-type", "application/json; charset=utf-8");
 
-		let request = new XMLHttpRequest();
-		request.open("POST", "server.php");
-		request.setRequestHeader("Content-type", "application/json; charset=utf-8");
+					request.onreadystatechange = function () {
+						if (request.readyState < 4) {
+							resolve();
+						} else if (request.readyState === 4) {
+							if (request.status == 200) {
+								resolve();
+							} else {
+								reject();
+							}
+						}
+					};
 
-		let formData = new FormData(form);
-		//Этот объект будет хранить все данные, которые пользователь ввел в форму
-
-		let obj = {};//Промежуточный объект, нужный для перевода данных формы в JSON
-		formData.forEach(function (value, key) {
-			obj[key] = value;
-		});
-		let json = JSON.stringify(obj);
-		request.send(json);//Отправка данных формы на сервер
-
-		request.addEventListener("readystatechange", function () {//Наблюдение за состоянием запроса
-			if (request.readyState < 4) {
-				statusMessage.innerHTML = message.loading;
-			} else if (request.readyState === 4 && request.status == 200) {
-				statusMessage.innerHTML = message.success;
-			} else {
-				statusMessage.innerHTML = message.failure;
+					let obj = {};//Промежуточный объект, нужный для перевода данных формы в JSON
+					data.forEach(function (value, key) {
+						obj[key] = value;
+					});
+					request.send(JSON.stringify(obj));
+				});
+			}// End postData
+			console.log(postData());
+			function clearInput() {
+				for (let i = 0; i < input.length; i++) {//Очистка инпутов после отправки формы
+					input[i].value = "";
+				}
 			}
+			postData(formData)
+				.then(() => statusMessage.innerHTML = message.loading)
+				.then(() => {
+					thanksModal.style.display = "block";
+					mainModal.style.display = "none";
+					statusMessage.innerHTML = "";
+				})
+				.catch(() => statusMessage.innerHTML = message.failure)
+				.then(clearInput, () => statusMessage.innerHTML = "");
 		});
-
-		for (let i = 0; i < input.length; i++) {//Очистка инпутов после отправки формы
-			input[i].value = "";
-		}
-	});
+	}
+	sendForm(form);
 
 	let contactForm = document.querySelector("#form"),
 		contactInputs = contactForm.getElementsByTagName("input");
