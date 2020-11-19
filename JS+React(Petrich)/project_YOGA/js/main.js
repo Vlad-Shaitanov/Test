@@ -285,4 +285,58 @@ window.addEventListener("DOMContentLoaded", () => {
 		}, 5000);
 	}
 	changeSlides();
+
+
+	//=== Calculator ===
+
+	let persons = document.querySelectorAll(".counter-block-input")[0],
+		days = document.querySelectorAll(".counter-block-input")[1],
+		place = document.querySelector("#select"),
+		totalPrice = document.querySelector("#total"),
+		personsSum = 0,//Начальное кол-во людей
+		daysSum = 0,//Начальное кол-во дней
+		total = 0;//Стартовая сумма поездки
+
+	totalPrice.innerHTML = 0;
+	persons.addEventListener("change", function () {
+		if (persons.value < 0) {
+			persons.value = 0;
+		} else if (persons.value > 100) {
+			persons.value = 100;
+		}
+		personsSum = +this.value;
+		total = (daysSum + personsSum) * 4000;
+
+		if (days.value == "") {
+			totalPrice.innerHTML = 0;
+		} else {
+			totalPrice.innerHTML = total;
+		}
+	});
+
+	days.addEventListener("change", function () {
+		if (days.value < 0) {
+			days.value = 0;
+		} else if (days.value > 100) {
+			days.value = 100;
+		}
+
+		daysSum = +this.value;
+		total = (daysSum + personsSum) * 4000;
+
+		if (persons.value == "") {
+			totalPrice.innerHTML = 0;
+		} else {
+			totalPrice.innerHTML = total;
+		}
+	});
+
+	place.addEventListener("change", function () {
+		if (persons.value == "" || days.value == "") {
+			totalPrice.innerHTML = 0;
+		} else {
+			let t = total;//Техюпеременная для избежания бага в расчетах
+			totalPrice.innerHTML = t * this.options[this.selectedIndex].value;
+		}
+	});
 });
